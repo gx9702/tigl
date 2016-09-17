@@ -18,7 +18,7 @@ artifacts:
     name: binaries
 
 install:
-  - ps: cinst doxygen.install
+  - ps: cinst doxygen.portable
   - ps: |
       Write-Output "Configuration: $env:CONFIGURATION"
       Write-Output "Platform: $env:PLATFORM"
@@ -82,3 +82,5 @@ after_test:
 cache:
  - c:\oce
  - c:\tixi -> appveyor.yml
+ - C:\ProgramData\chocolatey\bin -> appveyor.yml
+ - C:\ProgramData\chocolatey\lib -> appveyor.yml
